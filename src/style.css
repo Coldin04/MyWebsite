@@ -9,11 +9,13 @@ body {
     box-sizing: border-box;
     background-color: #fafafa;
     font-family: Arial, sans-serif;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
 .main-div{
+
     height: 100dvh;
     scroll-snap-type: y mandatory; /* 启用垂直滚动捕捉 */
     overflow-y: scroll;            /* 启用垂直滚动 */
@@ -30,14 +32,14 @@ body {
     text-align: center;
     padding-top: 25dvh;
     scroll-snap-align: start;
+
 }
 .ava-div {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .myname-text {
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 .myname-text .gradient-text{
     background-image: linear-gradient(to right, #45e855f2, #62c6e7ce);
@@ -49,6 +51,7 @@ body {
     border-radius: 50%;
     margin-block: 0;
 }
+
 .info-text-div {
     font-size: 1.2rem;
     margin-top: 1rem;
@@ -89,6 +92,7 @@ body {
     min-width: 6rem;           /* 限制信息块的最小宽度 */
     margin-inline: 5vw;        /* 每个信息块之间的间距 */
 }
+
 .info-div a{
     color: #218dff;
     text-decoration: none; /* 去掉原有的下划线 */
@@ -112,12 +116,10 @@ body {
 
 
 .footer-div {
-    text-align: center;
+    text-align: start;
     margin-top: 2rem;
     font-size: 0.75rem;
     color: #6c757d;
-    scroll-snap-align: end; /* 底部吸附 */
-    padding: 5vh;
 }
 .footer-div a{
     color: #6c757d;
@@ -137,26 +139,19 @@ body {
 }
 
 /* 添加小设备样式 */
+
 @media (max-width: 480px) {
+
     .myname-text {
-        font-size: 2.5rem;
+        font-size: 2.9rem;
         margin-top: 0.8rem;
     }
     .ava-div {
         align-items: center;
     }
-    .info-text-div {
-        font-size: 1rem;
-        max-width: 90vw;
-        margin-top: 1rem;
-    }
     .info-div {
         margin-left: 1.6rem;
         font-size: 1rem;
         padding-bottom: 7dvh;
-    }
-    .ava-img-round {
-        width: 40vw;
-        height: 40vw;
     }
 }
